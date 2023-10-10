@@ -66,11 +66,11 @@ function CreateYourOwnMoviePage() {
       </label>
       <label>
         Year
-        <input type='number' value={year} onChange={event => setYear(event.target.value)} required />
+        <input type='text' value={year} onChange={event => setYear(event.target.value)} required inputMode="numeric" pattern="[0-9]*" />
       </label>
       <label>
         Rating
-        <input type='number' value={rating} onChange={event => setRating(event.target.value)} required />
+        <input type='text' value={rating} onChange={event => setRating(event.target.value)} required inputMode="numeric" pattern="[0-9]*" />
       </label>
       <button type='submit'>Create New Harry Potter Movie!</button>
     </form>
