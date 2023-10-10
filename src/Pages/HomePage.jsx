@@ -7,7 +7,7 @@ function HomePage() {
 
   const fetchAllMovies = async () => {
     const response = await fetch(
-      "http://localhost:5001/Movies/"
+      "https://backendharrypottermovies.adaptable.app/Movies"
     );
 
     if (response) {

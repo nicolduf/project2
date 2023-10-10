@@ -8,7 +8,7 @@ function MoviesDetailsPage() {
 
     useEffect(() => {
         // Fetch movie details based on movieId from your db.json
-        fetch(`http://localhost:5001/Movies/${movieId}`)
+        fetch(`https://backendharrypottermovies.adaptable.app/Movies/${movieId}`)
             .then((response) => response.json())
             .then((movieData) => {
                 setMovie(movieData);
