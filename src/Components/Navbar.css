@@ -1,28 +1,16 @@
-/* Navbar.css */
 .navbar {
     font-size: 24px;
-    /* Change the font size to your desired size, e.g., 18px */
     color: gold;
-    /* Change the font color to gold */
-    /* You can add more styles as needed */
 }
 
-/* Style the links inside the Navbar */
 .navbar a {
     color: gold;
-    /* Set the link color to gold as well */
     text-decoration: none;
-    /* Remove the default underline on links */
-    /* You can add more styles for links if needed */
 }
 
-/* Style the button inside the Navbar */
 .navbar button {
     background-color: gold;
-    /* Set the background color of the button to gold */
     color: black;
-    /* Set the text color of the button to black or any other color you prefer */
-    /* You can add more button styles as needed */
 }
 
 .navBarLinks {
