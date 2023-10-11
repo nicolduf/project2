@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'; // Import the CSS file
+import audioFragment from "../assets/song.mp3"
 
 function Navbar() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audio] = useState(new Audio('/src/assets/song.mp3'));
+  const [audio] = useState(new Audio(audioFragment));
 
   useEffect(() => {
-    if (isPlaying) {
-      audio.play();
-    } else {
-      audio.pause();
+    if (audio) {
+
+      if (isPlaying) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+
     }
   }, [isPlaying, audio]);
 
