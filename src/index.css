@@ -76,16 +76,20 @@ button:focus-visible {
   position: relative;
 }
 
-.homePageImages {
+.allMoviesPageImages {
   width: 60vw;
-  /* Add any other image styling here */
+    border-radius: 12px;
 }
 
-.homePageTitlesOnImage {
+.allMoviesPageTitlesOnImage {
   position: absolute;
-  top: 10px; /* Adjust the top position as needed */
-  left: 10px; /* Adjust the left position as needed */
-  background-color: none; /* Add a background color for better readability */
-  padding: 5px; /* Add padding to the title */
+  top: 10px;
+    /* Adjust the top position as needed */
+    left: 10px;
+    /* Adjust the left position as needed */
+    background-color: none;
+    /* Add a background color for better readability */
+    padding: 5px;
+    /* Add padding to the title */
   color: gold;
 }

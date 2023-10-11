@@ -1,50 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 function HomePage() {
-  const [movies, setMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+    return (
+        <div className="home-page">
+            <h1>A POTTER FAN? ARE WE?</h1>
+            <p>Welcome to the world of the Harry Potter movies that just didn't quite make it!</p>
 
-  const fetchAllMovies = async () => {
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/Movies`);
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const moviesData = await response.json();
-      setMovies(moviesData);
-      setIsLoading(false);
-    } catch (error) {
-      console.error("Error fetching movie data:", error);
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchAllMovies();
-  }, []);
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  return (
-    <>
-      {movies.map((movie) => (
-        <div key={movie.id} className="movie-item">
-          <Link to={`/MoviesDetailsPage/${movie.id}`}>
-            <div className="movie-item-wrapper">
-              <img src={movie.imageUrl} alt={movie.title} className="homePageImages" />
-              <h1 className="homePageTitlesOnImage">
-                {movie.title}
-              </h1>
+            <div className="movie-links">
+                <p>Click here and behold:</p>
+                <Link to="/AllMoviesPage">The top 12 Unreleased Harry Potter movies you never knew you needed in your life!</Link>
             </div>
-          </Link>
+
+            <p>Anyway, while you're here, why not create your own???</p>
+            <Link to="/CreateYourOwnMoviePage">Get started on your magical movie adventure!</Link>
         </div>
-      ))}
-    </>
   );
 }
 

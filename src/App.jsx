@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar.jsx';
 import HomePage from './Pages/HomePage.jsx';
+import AllMoviesPage from './Pages/AllMoviesPage.jsx';
 import MoviesDetailsPage from './Pages/MoviesDetailsPage.jsx';
 import CreateYourOwnMoviePage from './Pages/CreateYourOwnMoviePage';
 
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/AllMoviesPage/' element={<AllMoviesPage />} />
           <Route path='/MoviesDetailsPage/:movieId' element={<MoviesDetailsPage />} />
           <Route path='/CreateYourOwnMoviePage/' element={<CreateYourOwnMoviePage />} />
           <Route path='*' element={<h1>404 Page</h1>} />

@@ -30,9 +30,8 @@ function Navbar() {
       </button>
       <div className='navBarLinks'>
         <Link to="/">Home</Link>
+        <Link to="/AllMoviesPage">Top Unreleased Harry Potter Movies</Link>
         <Link to="/CreateYourOwnMoviePage">Create Your Own Movie!</Link>
-
-
       </div>
 
     </nav>
