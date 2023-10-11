@@ -6,7 +6,9 @@ function CreateYourOwnMoviePage() {
   const [title, setTitle] = useState("");
   const [year, setYear] = useState("");
   const [rating, setRating] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
   const [error, setError] = useState("");
+
 
   const onSubmit = async event => {
     event.preventDefault();
@@ -14,6 +16,7 @@ function CreateYourOwnMoviePage() {
       title,
       year,
       rating,
+      imageUrl,
     };
 
     // Validate inputs
@@ -70,6 +73,10 @@ function CreateYourOwnMoviePage() {
       <label>
         Rating
         <input type='text' value={rating} onChange={event => setRating(event.target.value)} required inputMode="numeric" pattern="[0-9]*" />
+      </label>
+      <label>
+        Image
+        <input value={imageUrl} onChange={event => setImageUrl(event.target.value)} required />
       </label>
       <button type='submit'>Create New Harry Potter Movie!</button>
     </form>
