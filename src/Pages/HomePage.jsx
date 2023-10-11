@@ -6,14 +6,18 @@ function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchAllMovies = async () => {
-    const response = await fetch(
-      "https://backendharrypottermovies.adaptable.app/Movies"
-    );
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/Movies/`);
 
-    if (response) {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
       const moviesData = await response.json();
-      console.log(moviesData);
       setMovies(moviesData);
+      setIsLoading(false);
+    } catch (error) {
+      console.error("Error fetching movie data:", error);
       setIsLoading(false);
     }
   };

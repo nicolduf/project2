@@ -1,19 +1,26 @@
-// Inside MoviesDetailsPage.jsx
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function MoviesDetailsPage() {
     const { movieId } = useParams();
     const [movie, setMovie] = useState(null);
+    const apiUrl = `${import.meta.env.VITE_API_URL}/Movies/new/${movieId}`;
 
     useEffect(() => {
-        // Fetch movie details based on movieId from your db.json
-        fetch(`https://backendharrypottermovies.adaptable.app/Movies/${movieId}`)
-            .then((response) => response.json())
+        fetch(apiUrl)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
             .then((movieData) => {
                 setMovie(movieData);
+            })
+            .catch((error) => {
+                console.error("Error fetching movie data:", error);
             });
-    }, [movieId]);
+    }, [apiUrl]);
 
     if (!movie) {
         return <div>Loading...</div>;
@@ -25,7 +32,6 @@ function MoviesDetailsPage() {
             <p>Year: {movie.year}</p>
             <p>Rating: {movie.rating}</p>
             <img src={movie.imageUrl} alt={movie.title} />
-            {/* Add other movie details as needed */}
         </div>
     );
 }

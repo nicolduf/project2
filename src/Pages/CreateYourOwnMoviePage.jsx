@@ -34,7 +34,7 @@ function CreateYourOwnMoviePage() {
     }
 
     try {
-      const response = await fetch(`https://backendharrypottermovies.adaptable.app/Movies/new`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/Movies/new`, {
         method: 'POST', 
         body: JSON.stringify(values),
         headers: { 'Content-type': 'application/json' },
