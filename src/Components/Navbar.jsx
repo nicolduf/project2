@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css'; // Import the CSS file
 
 function Navbar() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -19,11 +20,16 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link to="/">Home</Link>
-      <Link to="/CreateYourOwnMoviePage">Create Your Own Movie!</Link>
       <button onClick={toggleAudio}>
         {isPlaying ? 'Pause Harry Potter Music' : 'Play Me Some Harry Potter Music Please!'}
       </button>
+      <div className='navBarLinks'>
+        <Link to="/">Home</Link>
+        <Link to="/CreateYourOwnMoviePage">Create Your Own Movie!</Link>
+
+
+      </div>
+
     </nav>
   );
 }
