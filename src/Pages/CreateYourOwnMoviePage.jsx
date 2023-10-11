@@ -6,7 +6,7 @@ function CreateYourOwnMoviePage() {
   const [title, setTitle] = useState("");
   const [year, setYear] = useState("");
   const [rating, setRating] = useState("");
-  const [error, setError] = useState(""); // Add state for error message
+  const [error, setError] = useState("");
 
   const onSubmit = async event => {
     event.preventDefault();
@@ -43,7 +43,6 @@ function CreateYourOwnMoviePage() {
       if (response.ok) {
         const newMovie = await response.json();
         console.log(newMovie);
-        // Redirect to the newly created movie's details page
         navigate(`/MoviesDetailsPage/${newMovie.id}`);
       } else {
         setError("An error occurred while creating the movie.");
@@ -59,7 +58,7 @@ function CreateYourOwnMoviePage() {
       style={{ display: 'grid', gridTemplate: 'auto / 1fr', justifyItems: 'center' }}
       onSubmit={onSubmit}
     >
-      {error && <div style={{ color: 'red' }}>{error}</div>} {/* Display error message */}
+      {error && <div style={{ color: 'red' }}>{error}</div>}
       <label>
         Title
         <input value={title} onChange={event => setTitle(event.target.value)} required />
