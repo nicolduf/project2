@@ -34,7 +34,7 @@ function CreateYourOwnMoviePage() {
     }
 
     try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/Movies/new`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/Movies`, {
         method: 'POST', 
         body: JSON.stringify(values),
         headers: { 'Content-type': 'application/json' },

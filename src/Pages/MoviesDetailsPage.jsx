@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 function MoviesDetailsPage() {
     const { movieId } = useParams();
     const [movie, setMovie] = useState(null);
-    const apiUrl = `${import.meta.env.VITE_API_URL}/Movies/new/${movieId}`;
+    const apiUrl = `${import.meta.env.VITE_API_URL}/Movies/${movieId}`;
 
     useEffect(() => {
         fetch(apiUrl)
