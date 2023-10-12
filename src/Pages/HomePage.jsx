@@ -11,7 +11,7 @@ function HomePage() {
 
             <div className="movie-links">
                     <h2>Click here and behold:<br></br>
-                        <Link to="/AllMoviesPage">The top 12 Unreleased Harry Potter movies you never knew you needed in your life!</Link> </h2>
+                        <Link to="/AllMoviesPage">The top Unreleased Harry Potter movies you never knew you needed in your life!</Link> </h2>
             </div>
 
                 <h2>Anyway, while you're here, why not create your own???<br></br>
