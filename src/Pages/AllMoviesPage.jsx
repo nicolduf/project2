@@ -37,9 +37,8 @@ function AllMoviesPage() {
                     <Link to={`/MoviesDetailsPage/${movie.id}`}>
                         <div className="movie-item-wrapper">
                             <img src={movie.imageUrl} alt={movie.title} className="allMoviesPageImages" />
-                            <h1 className="allMoviesPageTitlesOnImage">
-                                {movie.title}
-                            </h1>
+                            <h1 className="allMoviesPageTitlesOnImage"> {movie.title} </h1>
+                            <div className="movie-review">{movie.review}</div>
                         </div>
                     </Link>
                 </div>
