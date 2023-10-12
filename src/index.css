@@ -76,6 +76,10 @@ button:focus-visible {
   position: relative;
 }
 
+.moviesDetailsPageImages {
+  width: 80vw;
+  border-radius: 12px;
+}
 .allMoviesPageImages {
   width: 80vw;
     border-radius: 12px;
