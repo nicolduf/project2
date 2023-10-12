@@ -68,32 +68,42 @@ function CreateYourOwnMoviePage() {
       onSubmit={onSubmit}
     >
       {error && <div style={{ color: 'red' }}>{error}</div>}
-      <label>
-        Title
-        <input value={title} onChange={event => setTitle(event.target.value)} required />
-      </label>
-      <label>
-        Year
-        <input type='text' value={year} onChange={event => setYear(event.target.value)} required inputMode="numeric" pattern="[0-9]*" />
-      </label>
-      <label>
-        Rating
-        <input type='text' value={rating} onChange={event => setRating(event.target.value)} required inputMode="decimal" pattern="[0-9]*" />
-      </label>
-      <label>
-        Description
-        <input value={description} onChange={event => setDescription(event.target.value)} required />
-      </label>
-      <label>
-        Image
-        <input value={imageUrl} onChange={event => setImageUrl(event.target.value)} required />
-      </label>
-      <label>
-        Review
-        <input value={review} onChange={event => setReview(event.target.value)} required />
-      </label>
+      <table>
+        <tr>
+          <td><label for="title">Title:</label>
+          </td>
+          <td><input value={title} onChange={event => setTitle(event.target.value)} required id="title" />
+          </td>
+          <td><label for="year">Year:</label>
+          </td>
+          <td><input type='text' value={year} onChange={event => setYear(event.target.value)} required inputMode="numeric" pattern="[0-9]*" />
+          </td>
+          <td><label for="rating">Rating:</label>
+          </td>
+          <td><input type='text' value={rating} onChange={event => setRating(event.target.value)} required inputMode="decimal" pattern="[0-9]*" />
+          </td>
+          <td><label for="description">Description:</label>
+          </td>
+          <td><input value={description} onChange={event => setDescription(event.target.value)} required />
+          </td>
+          <td><label for="Image">Image:</label>
+          </td>
+          <td><input value={imageUrl} onChange={event => setImageUrl(event.target.value)} required />
+          </td>
+          <td><label for="review">Review:</label>
+          </td>
+          <td><input value={review} onChange={event => setReview(event.target.value)} required />
+          </td>
+        </tr>
+      </table>
       <button type='submit'>Create New Movie</button>
     </form>
+
+      
+      
+      
+      
+      
 
     </div>
 
