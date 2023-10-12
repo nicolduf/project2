@@ -46,8 +46,9 @@ function MoviesDetailsPage() {
     return (
         <div className="movie-details">
             <h1>{movie.title}</h1>
-            <p>Year: {movie.year}</p>
-            <p>Rating: {movie.rating}</p>
+            <p>{movie.year}</p>
+            <p>{movie.rating} Stars</p>
+            <p>{movie.description}</p>
             <img src={movie.imageUrl} alt={movie.title} />
             <button onClick={deleteMovie}>Delete Movie</button>
         </div>
