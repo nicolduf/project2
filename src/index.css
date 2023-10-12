@@ -76,6 +76,10 @@ button:focus-visible {
   position: relative;
 }
 
+.movie-details {
+  color: gold;
+  font-size: x-large;
+}
 .moviesDetailsPageImages {
   width: 80vw;
   border-radius: 12px;
@@ -140,4 +144,28 @@ button:focus-visible {
   justify-content: center;
   color: #fff;
   /* Adjust text color for better visibility */
+}
+.text-background {
+  background-color: rgba(7, 7, 7, 0.3);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.createMovieForm {
+  padding: 20px;
+  display: grid;
+  grid-template: auto 1fr;
+  justify-items: center;
+  justify-content: space-evenly;
+
+
+}
+
+.createMovieForm label {
+  color: white;
+
+}
+
+.createYourOwnMoviePageCompleteScreen {
+  height: 100%;
 }

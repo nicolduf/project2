@@ -62,8 +62,9 @@ function CreateYourOwnMoviePage() {
   }
 
   return (
-    <form
-      style={{ display: 'grid', gridTemplate: 'auto / 1fr', justifyItems: 'center' }}
+
+    <div className="createYourOwnMoviePageCompleteScreen">
+      <form className="createMovieForm"
       onSubmit={onSubmit}
     >
       {error && <div style={{ color: 'red' }}>{error}</div>}
@@ -93,7 +94,12 @@ function CreateYourOwnMoviePage() {
       </label>
       <button type='submit'>Create New Movie</button>
     </form>
+
+    </div>
+
   );
 }
 
 export default CreateYourOwnMoviePage;
+
+

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'; // Import the CSS file
 import audioFragment from "../assets/song.mp3"
+import video from "../assets/Stars.mp4"
 
 function Navbar() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -9,13 +10,11 @@ function Navbar() {
 
   useEffect(() => {
     if (audio) {
-
       if (isPlaying) {
         audio.play();
       } else {
         audio.pause();
       }
-
     }
   }, [isPlaying, audio]);
 
@@ -25,15 +24,19 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <button onClick={toggleAudio} className="music-button">
-        {isPlaying ? 'Pause Harry Potter Music' : 'Play Me Some Harry Potter Music Please!'}
-      </button>
+      <video className="background-video" autoPlay loop muted>
+        <source src={video} type="video/mp4" />
+        {/* <source src="/assets/Stars.mp4" type="video/mp4" /> */}
+        Your browser does not support the video tag.
+      </video>
       <div className='navBarLinks'>
         <Link to="/">Home</Link>
-        <Link to="/AllMoviesPage">Top Unreleased Harry Potter Movies</Link>
+        <Link to="/AllMoviesPage">Unreleased Harry Potter Movies</Link>
         <Link to="/CreateYourOwnMoviePage">Create Your Own Movie!</Link>
+        <button onClick={toggleAudio} className="music-button">
+          {isPlaying ? 'Pause Harry Potter Music' : 'Play Me Some Harry Potter Music Please!'}
+        </button>
       </div>
-
     </nav>
   );
 }

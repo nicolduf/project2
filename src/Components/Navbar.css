@@ -14,6 +14,19 @@
 }
 
 .navBarLinks {
+    display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     font-size: xx-large;
-    padding: 50px;
-}
+    padding: 20px;
+    }
+    
+    .background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
