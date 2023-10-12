@@ -8,7 +8,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  background-color: black;
+  /* background-color: black; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,11 +27,11 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* margin: 0; */
+    /* display: flex; */
+    /* place-items: center; */
+    /* min-width: 320px; */
+    /* min-height: 100vh; */
   background-color: black;
 }
 
@@ -77,14 +77,15 @@ button:focus-visible {
 }
 
 .allMoviesPageImages {
-  width: 60vw;
+  width: 80vw;
     border-radius: 12px;
 }
 
 .allMoviesPageTitlesOnImage {
   position: absolute;
+  align-content: center;
   top: 10px;
-  left: 10px;
+  left: 75px;
   background-color: none;
   padding: 5px;
   color: gold;
@@ -119,4 +120,20 @@ button:focus-visible {
 .music-button {
   font-size: 14px;
   padding: 5px 10px;
+}
+.home-page {
+  background-image: url('/src/assets/background.jpg');
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  /* Adjust text color for better visibility */
 }
