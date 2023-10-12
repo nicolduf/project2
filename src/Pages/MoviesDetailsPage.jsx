@@ -16,7 +16,7 @@ function MoviesDetailsPage() {
                     throw new Error("Network response was not ok");
                 }
                 setMovie(null);
-                navigate('/'); // Redirect to the home page
+                navigate('/AllMoviesPage');
             })
             .catch((error) => {
                 console.error("Error deleting movie:", error);
