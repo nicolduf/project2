@@ -1,5 +1,8 @@
 .navbar {
     font-size: 24px;
+    width: 89vw;
+    border: 2px solid red;
+
     color: gold;
 }
 
