@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <button onClick={toggleAudio}>
+      <button onClick={toggleAudio} className="music-button">
         {isPlaying ? 'Pause Harry Potter Music' : 'Play Me Some Harry Potter Music Please!'}
       </button>
       <div className='navBarLinks'>

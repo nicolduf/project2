@@ -112,6 +112,11 @@ button:focus-visible {
 }
 
 .movie-item:hover .movie-review {
-  display: flex; /* Show review on hover */
-  opacity: 1; /* Make it visible */
+  display: flex;
+  opacity: 1;
+}
+
+.music-button {
+  font-size: 14px;
+  padding: 5px 10px;
 }
