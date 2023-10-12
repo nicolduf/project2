@@ -144,7 +144,6 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   color: #fff;
-  /* Adjust text color for better visibility */
 }
 .text-background {
   background-color: rgba(7, 7, 7, 0.3);
@@ -152,21 +151,26 @@ button:focus-visible {
   padding: 30px;
 }
 
-.createMovieForm {
-  padding: 20px;
-  display: grid;
-  grid-template: auto 1fr;
-  justify-items: center;
-  justify-content: space-evenly;
-
-
-}
-
-.createMovieForm label {
-  color: white;
-
-}
-
 .createYourOwnMoviePageCompleteScreen {
-  height: 100%;
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+  align-items: center; /* Center the form vertically */
+  height: 100vh;
+}
+
+.createMovieForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form elements horizontally */
+  width: 300px; /* Adjust the width as needed */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
 }
