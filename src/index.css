@@ -122,6 +122,7 @@ button:focus-visible {
 
 .movie-item:hover .movie-review {
   display: flex;
+  font-size: xx-large;
   opacity: 1;
 }
 
