@@ -37,6 +37,7 @@ The MVP of this project includes the following users features:
 - `Navbar.jsx`
 
 ## Links
+
 [Deployment Link] (https://harrypotterunreleasedmovies.netlify.app/AllMoviesPage)
 [Github repository Link for React app] (https://github.com/nicolduf/project2.git)
 [Github repository Link for Server app] (https://github.com/nicolduf/json-server-backend.git)

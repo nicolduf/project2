@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import StarsVideo from "../assets/Stars.mp4";
 
 
 function CreateYourOwnMoviePage() {
@@ -32,7 +31,7 @@ function CreateYourOwnMoviePage() {
     }
 
     const yearNumber = parseInt(values.year, 10);
-    if (isNaN(yearNumber) || yearNumber < 1900) {
+    if (isNaN(yearNumber) || yearNumber < 2000) {
       setError("Invalid year.");
       return;
     }

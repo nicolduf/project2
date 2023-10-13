@@ -145,6 +145,7 @@ button:focus-visible {
   justify-content: center;
   color: #fff;
 }
+
 .text-background {
   background-color: rgba(7, 7, 7, 0.3);
   border-radius: 12px;
